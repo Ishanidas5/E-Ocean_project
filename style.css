@@ -1,0 +1,243 @@
+body{
+    overflow-x: hidden;
+    background-color: white;
+}
+nav{
+    width:98vw;
+    height:85px;
+    position:fixed;
+    border-radius: 10px 10px 0px 0px;
+    display:block;
+    background-color: rgb(219, 108, 127);
+}
+nav:hover{
+    background-color: #1505a3;
+}
+.nav{
+    display: inline;
+}
+.Website_Heading{
+    float:left;
+    margin-left: 10px;
+    font-size: 36px;
+    font-weight: lighter;
+}
+select{
+    padding:5px;
+    border-radius: 5px;
+    color:gold;
+    background-color: black;
+    margin:10px;
+    text-align:justify;
+    float:right;
+}
+.HomePage{
+    float:right;
+    margin-top:10px;
+    margin-right: 10px;
+}
+#animated-text{
+    font-size: 54px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    position:relative;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+h3:hover{
+    text-decoration: underline;
+}
+.Collaboration{
+    display:inline-block;
+    margin:10px;
+    border-radius: 5px;
+    align-content: center;
+    width: 450px;
+    height: 350px;
+}
+.Collaboration:hover{
+    height: 365px;
+}
+@keyframes glow {
+    0%{
+        color:rgb(71, 52, 2) goldenrod;
+        opacity:5;
+    }
+    30%{
+        color:rgb(124, 90, 4);
+        opacity:3.5;
+    }
+    50%{
+        color:rgb(162, 117, 2);
+        opacity:2;
+    }
+    70%{
+        color:rgb(187, 135, 3);
+        opacity:1.5;
+    }
+    85%{
+        color:rgb(123, 90, 7);
+        opacity:2.5;
+    }
+    100%{
+        color:rgb(100, 73, 3);
+        opacity:4;
+    }
+}
+p::first-letter{
+    font-size: 36px;
+    font-weight: bolder;
+}
+.Description{
+    height:350px;
+    width:fit-content;
+    margin:20px;
+    padding:10px;
+}
+.description-text{
+    height: fit-content;
+    width:fit-content;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: light;
+    line-height: 1cm;
+    text-indent: 2%;
+    padding:5px;
+    margin-right: 10px;
+}
+.Sign In{
+    background-color: #000;
+}
+.sign_in{
+    color:gold;
+    background-color: black;
+    font-size: 16px;
+    float:right;
+    padding:5px;
+    margin:10px;
+    width:fit-content;
+    border-radius:5px;
+}
+.content-caraousel{
+    box-sizing: border-box;
+}
+.slider {
+    width: fit-content;
+    text-align: center;
+    overflow:scroll;
+    border-radius: 2px;
+    margin-bottom: 10px;
+}
+.slides {
+    display: flex;
+    margin-left: 15px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    border:rgb(177, 151, 1) 5px solid;
+    border-radius: 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    /*
+scroll-snap-points-x: repeat(300px);
+scroll-snap-type: mandatory;
+*/
+}
+.slides::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+.slides > a {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    width: 100%;
+    height: 500px;
+    border-radius: 5px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    color:#0e0254;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.slides > a:target {
+    /*   transform: scale(0.8); */
+}
+
+.slider > a {
+    display: inline-flex;
+    width: 100px;
+    height: fit-content;
+    background: rgb(246, 166, 166);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    border:#000 1px solid;
+    margin-top:10px;
+    padding: 5px;
+    margin: 10px;
+}
+.slider > a:active {
+    top: 1px;
+}
+.slider > a:focus {
+    background: #000;
+}
+h2{
+    font-size: 28px;
+}
+@media only screen and (max-width:1000px){
+    body{
+        text-overflow: hidden;
+        align-content: center;
+        background-color: #8ab1f3;
+    }
+    p{
+        font-size:14px;
+    }
+    h1{
+        text-overflow: hidden;
+    }
+    nav{
+        height: fit-content;
+        text-overflow: hidden;
+    }
+    #desc-photo{
+        width:100%;
+        height: auto;
+    }
+    h2{
+        font-size: 24px;
+    }
+    .Description{
+        height: auto;
+    }
+}
+footer{
+    height:40px;
+    width:100%;
+    text-align: center;
+    background-color: #000;
+    color:gold;
+    border-radius: 0px 0px 5px 5px;
+    padding:5px;
+}
+  /* Don't need button navigation */
+@supports (scroll-snap-type) {
+    .slider > a {
+      display: none;
+    }
+  }
